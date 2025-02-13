@@ -47,11 +47,13 @@ An AI-powered Python script that intelligently organizes images into thematic ca
    wget https://github.com/OlafenwaMoses/ImageAI/releases/download/3.0.0-pretrained/retinanet_resnet50_fpn_coco-eeacb38b.pth -P models/
 4. **Folder Sturcture**
    Smart-Image-Sorter/
+```
 ├── models/
 │   └── retinanet_resnet50_fpn_coco-eeacb38b.pth
 ├── test_photos/        # Your source folder
-├── organize_photos.py  # Main script
+├── src
 └── README.md
+```
 ## Usage
 1. **Prepare Images**
    Place files in test_photos folder:
