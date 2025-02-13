@@ -83,4 +83,4 @@ An AI-powered Python script that intelligently organizes images into thematic ca
 ├── Non_Photos/
 └── Other_Photos/
 ```
-   
+#PS: I put a lot of comments in the code so anyone can understand it!!!
