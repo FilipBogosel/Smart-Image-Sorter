@@ -57,16 +57,19 @@ An AI-powered Python script that intelligently organizes images into thematic ca
 ## Usage
 1. **Prepare Images**
    Place files in test_photos folder:
+```
    test_photos/
 ├── family_reunion.jpg
 ├── sunset.jpg
 ├── steak_dinner.png
 └── document.pdf
-2. **Run the Sorter**
+```
+3. **Run the Sorter**
    ```bash
    python organize_photos.py
-3. **View Organized Files**
+4. **View Organized Files**
     Results will appear in categorized subfolders:\
+```
    test_photos/
 ├── Portrait/
 ├── Couple/
@@ -79,4 +82,5 @@ An AI-powered Python script that intelligently organizes images into thematic ca
 ├── Pet/
 ├── Non_Photos/
 └── Other_Photos/
+```
    
