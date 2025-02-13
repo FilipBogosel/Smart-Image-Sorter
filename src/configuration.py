@@ -57,3 +57,18 @@ VEHICLE_KEYWORDS = {
     'bulldozer', 'crane', 'forklift', 'excavator', 'dump', 'truck', 'garbage', 'truck', 'fire',
     'sport car', 'sedan', 'hatchback', 'coupe', 'convertible', 'suv', 'minivan', 'pickup', 'exhaust'
 }  # keywords that can be found in vehicle photos when they are analyzed by the ResNet18 model
+
+
+ANIMAL_KEYWORDS = {
+    'animal', 'mammal', 'reptile', 'bird', 'fish', 'insect', 'amphibian', 'arachnid', 'crustacean',
+    'mollusk', 'worm', 'snail', 'slug', 'jellyfish', 'octopus', 'squid', 'starfish', 'sea urchin',
+    'coral', 'anemone', 'sponge', 'crab', 'lobster', 'shrimp', 'prawn', 'barnacle', 'insect', 'ant',
+    'bee', 'wasp', 'hornet', 'fly', 'mosquito', 'moth', 'butterfly', 'beetle', 'bug', 'grasshopper',
+    'dog', 'cat', 'horse', 'cow', 'pig', 'sheep', 'goat', 'chicken', 'duck', 'goose', 'turkey',
+    'rabbit', 'hamster', 'guinea pig', 'ferret', 'rat', 'mouse', 'squirrel', 'chipmunk', 'beaver',
+    'otter', 'seal', 'walrus', 'whale', 'dolphin', 'porpoise', 'shark', 'ray', 'eel', 'snake',
+    'lizard', 'gecko', 'iguana', 'turtle', 'tortoise', 'crocodile', 'alligator', 'frog', 'toad',
+    'newt', 'salamander', 'axolotl', 'parrot', 'cockatoo', 'macaw', 'budgie', 'canary', 'finch',
+    'sparrow', 'crow', 'raven', 'magpie', 'jay', 'pigeon', 'dove', 'vulture', 'hawk', 'eagle',
+    'falcon', 'owl', 'kingfisher', 'woodpecker', 'hummingbird', 'swift', 'swallow', 'martin'
+}#keywords that can be found in animal photos when they are analyzed by the ResNet18 model

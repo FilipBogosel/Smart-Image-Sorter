@@ -1,6 +1,6 @@
 # I wrote comments to explain the code, so that anyone can understand what each part of the code does.
 # I also wrote some theoretical comments to explain the concepts used in the code, concepts that I learned about when doing research for this project.
-# The code is written in 3 parts: Configuration, Helper Functions, and Main Function.
+# The code is written in 5 modules: configuration.py, helpers.py, detection.py, classification.py, organise_photos.py, each with a specific role.
 import os  # os module provides a way of using operating system functionalities
 import shutil  # shutil module provides some functions to work with file objects and directories
 import torch  # PyTorch is an open source machine learning library from which we will use the ResNet18 model
