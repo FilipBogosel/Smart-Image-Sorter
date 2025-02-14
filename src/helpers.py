@@ -48,8 +48,7 @@ def obtain_photo_category_label(image_path):
     # to a tensor( a multi-dimensional matrix), which enables the model to process the image efficiently, and finally we normalize the image
     # so preprocess is a list of transformations that will be applied to the image
     img = Image.open(image_path).convert('RGB')  # Loads the image from the file path and converts it to RGB format
-    img_tensor = preprocess(img).unsqueeze(
-        0)  # preprocess adds transformations to the image, then we add a dimension to the tensor
+    img_tensor = preprocess(img).unsqueeze(0)  # preprocess adds transformations to the image, then we add a dimension to the tensor
     # because we have only one image, but the model expects a batch of images, so we add a dimension to the tensor to make it a batch of one image
 
     # The gradient helps the model learn from the data, it is used to update the weights of the model during training, taking the shortest path
