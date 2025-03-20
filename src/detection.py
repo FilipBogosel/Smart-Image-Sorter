@@ -1,8 +1,9 @@
 # ============DETECTION MODULE================
 #=====We'll have detection for people and animals
 import os
-from imageai.Detection import ObjectDetection# import the ObjectDetection class from the imageai.Detection module
+from imageai.Detection import ObjectDetection
 from configuration import ANIMAL_KEYWORDS
+import torch
 
 def setup_detector()->ObjectDetection:
     """Initialize the people detector (RetinaNet).
@@ -10,13 +11,17 @@ def setup_detector()->ObjectDetection:
     """
     #the dirname function returns the directory containing the file passed as an argument
     base_path = os.path.dirname(os.path.dirname(__file__))# get the parent directory of the current file, __file__ contains the path of the current file
-    model_path = os.path.join(base_path, "models", "retinanet_resnet50_fpn_coco-eeacb38b (1).pth")
+    model_path = os.path.join(base_path, "models", "retinanet_resnet50_fpn_coco-eeacb38b.pth")
     # We build the path this way because the model is in the models folder, while the detection.py file is in the src folder
     detector = ObjectDetection()# create an instance of the ObjectDetection class
     detector.setModelTypeAsRetinaNet()# this method sets the model type to RetinaNet(a model for object detection, good on small objects)
     detector.setModelPath(model_path)# Tells the detector where to find: pre-trained weights(the parameters that are found to be
     # the best for the model in a previous training), Model architecture file(the structure of the model)
+
     detector.loadModel()# this method is the one that actually reads the model from the files and loads the weights in memory=> the model is ready to be used
+    if torch.cuda.is_available():
+        detector.useGPU()
+        print("Using GPU acceleration for detection")
     print("Detection model loaded!")
     return detector# return the detector object, of type ObjectDetection, ready to be used
 
@@ -29,7 +34,7 @@ def detect_people(detector, file_path):
     detections = detector.detectObjectsFromImage(
         input_image=file_path,# the path to the image file
         output_image_path=None,# we don't need to save the image with the detected objects highlighted
-        minimum_percentage_probability=40# if the object detected has a probability of being a certain object greater than 40%, we consider it as being that object
+        minimum_percentage_probability=70# if the object detected has a probability of being a certain object greater than 40%, we consider it as being that object
     )# this method returns a list of dictionaries, each dictionary contains information about an object detected in the image
     return sum(1 for obj in detections if obj["name"] == "person")# goes through dictionaries and counts the number of people detected, each dictionary being an object found in the image
 

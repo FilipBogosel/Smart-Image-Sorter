@@ -1,6 +1,6 @@
 #This module contains the configuration settings for the Smart Image Sorter application.
 # ========== CONFIGURATION ========== #
-SOURCE_FOLDER = "D:\\Github\\Smart-Image-Sorter\\test_photos"
+#SOURCE_FOLDER = "D:\\test_photos"
 IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.bmp']
 DESTINATION_FOLDERS = {
     'portrait': "Portrait",# portrait = 1 person
@@ -22,7 +22,7 @@ NATURE_KEYWORDS = {
     'ocean', 'sky', 'cloud', 'sunset', 'waterfall', 'leaf', 'plant', 'grass','bush','cactus',
     'desert','beach','sand','rock','cave','volcano','island','jungle','rainforest','savanna',
     'tundra','arctic','antarctic','glacier','wetland','marsh','swamp','mangrove','reef','coral',
-    'sea','seashore','shore','coast','cliff','canyon','hill','valley','plateau','mesa'
+    'sea','seashore','shore','coast','cliff','canyon','hill','valley','plateau','mesa', 'mountains','snow','ice'
 }#keywords that can be found in nature photos when they are analyzed by the ResNet18 model
 
 URBAN_KEYWORDS = {
@@ -31,7 +31,10 @@ URBAN_KEYWORDS = {
     'airport', 'harbor', 'port', 'bridge', 'tunnel', 'plaza', 'square', 'market', 'mall', 'cinema',
     'theater', 'museum', 'library', 'school', 'college', 'university', 'hospital', 'clinic', 'police',
     'fire', 'post', 'office', 'bank', 'church', 'temple', 'mosque', 'synagogue', 'stadium',
-    'arena', 'court', 'field', 'park', 'garden', 'zoo', 'aquarium', 'amusement', 'playground','fountain'
+    'arena', 'court', 'field', 'park', 'garden', 'zoo', 'aquarium', 'amusement', 'playground','fountain','buildings','skyscrapers','hotels',
+    'Christmas tree','Christmas lights','Christmas decorations','Christmas ornaments','Christmas wreath','Christmas garland','Christmas stocking',
+    'shops','stores','malls','shopping centers','shopping malls','shopping streets','shopping districts','shopping areas','shopping complexes',
+    'fountains', 'windows','doors','balconies','roofs','chimneys','stairs','steps','balconies','porches','patios','terraces','decks','verandas'
 }#keywords that can be found in urban photos when they are analyzed by the ResNet18 model
 
 FOOD_KEYWORDS = {
@@ -39,7 +42,8 @@ FOOD_KEYWORDS = {
     'vegetable', 'bread', 'cake', 'pie', 'cookie', 'candy', 'chocolate', 'ice cream', 'pizza',
     'pasta', 'burger', 'sandwich', 'taco', 'sushi', 'salad', 'soup', 'stew', 'curry', 'rice',
     'noodle', 'meat', 'beef', 'pork', 'chicken', 'fish', 'seafood', 'egg', 'cheese', 'milk',
-    'coffee', 'tea', 'juice', 'soda', 'beer', 'wine', 'liquor', 'water'
+    'coffee', 'tea', 'juice', 'soda', 'beer', 'wine', 'liquor', 'water','cakes','cupcake','donut','muffin','pancake'
+    ,'waffle','toast','bagel','croissant','biscuit','roll','bun','sandwich','sub','wrap','taco','burrito','quesadilla','plates','bowls'
 }  # keywords that can be found in food photos when they are analyzed by the ResNet18 model
 
 ART_KEYWORDS = {
