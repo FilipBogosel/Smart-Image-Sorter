@@ -19,9 +19,6 @@ def setup_detector()->ObjectDetection:
     # the best for the model in a previous training), Model architecture file(the structure of the model)
 
     detector.loadModel()# this method is the one that actually reads the model from the files and loads the weights in memory=> the model is ready to be used
-    if torch.cuda.is_available():
-        detector.useGPU()
-        print("Using GPU acceleration for detection")
     print("Detection model loaded!")
     return detector# return the detector object, of type ObjectDetection, ready to be used
 

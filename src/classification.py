@@ -27,8 +27,10 @@ def classify_nature(image_path):
     :param image_path: The path to the image file.
     :return: True if the image has nature content, False otherwise.
     """
-    class_label = obtain_photo_category_label(image_path)#obtain the category label of the image
-    return any(keyword in class_label.lower() for keyword in NATURE_KEYWORDS)#return True if any of the nature keywords is found in the class label,
+    class_labels = obtain_photo_category_label(image_path)#obtain the category label of the image
+    for label in class_labels:
+        if any(keyword in label.lower() for keyword in NATURE_KEYWORDS or label.lower() in keyw for keyw in NATURE_KEYWORDS):
+            return True
 # the class_label being a string so even if the keyword is a substring of the class label, it will return True, otherwise it will return False
 
 def classify_urban(image_path):
@@ -36,8 +38,10 @@ def classify_urban(image_path):
        :param image_path: The path to the image file.
        :return: True if the image has urban content, False otherwise.
        """
-    class_label = obtain_photo_category_label(image_path)
-    return any(keyword in class_label.lower() for keyword in URBAN_KEYWORDS)
+    class_labels = obtain_photo_category_label(image_path)
+    for label in class_labels:
+        if any(keyword in label.lower() for keyword in URBAN_KEYWORDS or label.lower() in keyw for keyw in URBAN_KEYWORDS):
+            return True
 
 
 def classify_food(image_path):
@@ -45,22 +49,28 @@ def classify_food(image_path):
        :param image_path: The path to the image file.
        :return: True if the image has food content the most, False otherwise.
        """
-    class_label = obtain_photo_category_label(image_path)
-    return any(keyword in class_label.lower() for keyword in FOOD_KEYWORDS)
+    class_labels = obtain_photo_category_label(image_path)
+    for label in class_labels:
+        if any(keyword in label.lower() for keyword in FOOD_KEYWORDS or label.lower() in keyw for keyw in FOOD_KEYWORDS):
+            return True
 
 def classify_art(image_path):
     """Checks for art images using PyTorch's ResNet18.
        :param image_path: The path to the image file.
        :return: True if the image has art content, False otherwise.
        """
-    class_label = obtain_photo_category_label(image_path)
-    return any(keyword in class_label.lower() for keyword in ART_KEYWORDS)
+    class_labels = obtain_photo_category_label(image_path)
+    for label in class_labels:
+        if any(keyword in label.lower() for keyword in ART_KEYWORDS or label.lower() in keyw for keyw in ART_KEYWORDS):
+            return True
 
 def classify_vehicle(image_path):
     """Checks for vehicle images using PyTorch's ResNet18.
        :param image_path: The path to the image file.
        :return: True if the image has vehicle content, False otherwise.
        """
-    class_label = obtain_photo_category_label(image_path)
-    return any(keyword in class_label.lower() for keyword in VEHICLE_KEYWORDS)
+    class_labels = obtain_photo_category_label(image_path)
+    for label in class_labels:
+        if any(keyword in label.lower() for keyword in VEHICLE_KEYWORDS or label.lower() in keyw for keyw in VEHICLE_KEYWORDS):
+            return True
 

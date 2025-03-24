@@ -82,6 +82,10 @@ def obtain_photo_category_label(image_path, top_n = 5):
     # the class that the model thinks the image belongs to
     # we don't care about the value of the highest probability, so we don't assign it to a variable, we use an underscore,
     # the function returns a tuple
-    class_label = ResNet18_Weights.IMAGENET1K_V1.meta["categories"][class_id]  # takes the name of the class with the highest probability
+    class_labels = []
+    for prob_id in class_id:
+        class_labels.append(ResNet18_Weights.IMAGENET1K_V1.meta["categories"][prob_id])
+
+    #class_label = ResNet18_Weights.IMAGENET1K_V1.meta["categories"][class_id]  # takes the name of the class with the highest probability
     # .meta-> attribute contains metadata associated with the pre-trained weights, including the categories for classification
-    return class_label
+    return class_labels

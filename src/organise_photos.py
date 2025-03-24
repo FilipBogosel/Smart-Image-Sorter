@@ -42,16 +42,18 @@ def process_image(file_path, detector, source_folder):
             return os.path.join(source_folder, DESTINATION_FOLDERS['couple'])
         elif person_count > 2:
             return os.path.join(source_folder, DESTINATION_FOLDERS['group'])
-        elif classify_nature(file_path):
-            return os.path.join(source_folder,DESTINATION_FOLDERS['nature'])
-        elif classify_urban(file_path):
-            return os.path.join(source_folder, DESTINATION_FOLDERS['urban'])
         elif classify_food(file_path):
             return os.path.join(source_folder, DESTINATION_FOLDERS['food'])
         elif classify_art(file_path):
             return os.path.join(source_folder, DESTINATION_FOLDERS['art'])
         elif classify_vehicle(file_path):
             return os.path.join(source_folder, DESTINATION_FOLDERS['vehicle'])
+        elif classify_urban(file_path):
+            return os.path.join(source_folder, DESTINATION_FOLDERS['urban'])
+        elif classify_nature(file_path):
+            return os.path.join(source_folder,DESTINATION_FOLDERS['nature'])
+
+
         else:
             return os.path.join(source_folder, DESTINATION_FOLDERS['other'])
     except Exception as e:
