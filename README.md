@@ -1,12 +1,9 @@
 # Smart Image Sorter 🖼️
-
 An AI-powered Python script that intelligently organizes images into thematic categories using object detection and image classification.
-
-## Features
-
-- **Advanced Categorization**  
-  Automatically sorts images into 10+ categories:
-  - 👤 Portrait (1 person)
+## 🌟 Key Features
+- **Automatic Photo Organization**  
+  `📂` Sorts images into 10+ intelligent categories:
+   - 👤 Portrait (1 person)
   - 👫 Couple (2 people)
   - 👥 Group (3+ people)
   - 🌳 Nature (landscapes, plants, natural formations)
@@ -17,70 +14,29 @@ An AI-powered Python script that intelligently organizes images into thematic ca
   - 🐾 Pets (domestic animals)
   - 📁 Non-Photos (non-image files)
   - 📦 Other (uncategorized images)
-
-- **Dual AI Analysis**  
-  Combines:
-  - **RetinaNet**: Object detection for people counting
-  - **ResNet18**: Image classification for thematic recognition
-
-- **Customizable Categories**  
-  Easily modify keywords and thresholds for different themes
-
-## Installation
-
-### Requirements
-- Python 3.8+
-- 4GB+ RAM (8GB recommended)
-- 500MB+ disk space for AI models
-
-### Setup Guide
-
-1. **Clone Repository**
-   ```bash
-   git clone https://github.com/yourusername/Smart-Image-Sorter.git
-   cd Smart-Image-Sorter
-2. **Install Dependencies**
-   ```bash
-   pip install torch torchvision pillow imageai opencv-python
-3. **Download AI Models**
-   ```bash
-   wget https://github.com/OlafenwaMoses/ImageAI/releases/download/3.0.0-pretrained/retinanet_resnet50_fpn_coco-eeacb38b.pth -P models/
-4. **Folder Sturcture**
-   Smart-Image-Sorter/
+- **AI-Powered Classification**  
+  `🧠` Uses RetinaNet + ResNet18 models
+- **One-Click Setup**  
+  `⚡` Self-contained PowerShell installer
+- **GPU Acceleration**  
+  `🚀` Optional CUDA support for NVIDIA GPUs
+- **Smart Error Handling**  
+  `🛡️` Automatic recovery from processing errors
+# To run the commands below youy should run Power Shell as an administrator
+# Step 1
+Clone this repository:
+```bash
+git clone https://github.com/FilipBogosel/Smart-Image-Sorter.git
 ```
-├── models/
-│   └── retinanet_resnet50_fpn_coco-eeacb38b.pth
-├── test_photos/        # Your source folder
-├── src
-└── README.md
+# Step 2
+Run the install.ps1 script
+```bash
+cd Smart-Image-Sorter
+./install.ps1[GPU]
 ```
-## Usage
-1. **Prepare Images**
-   Place files in test_photos folder:
-```
-   test_photos/
-├── family_reunion.jpg
-├── sunset.jpg
-├── steak_dinner.png
-└── document.pdf
-```
-3. **Run the Sorter**
-   ```bash
-   python organize_photos.py
-4. **View Organized Files**
-    Results will appear in categorized subfolders:\
-```
-   test_photos/
-├── Portrait/
-├── Couple/
-├── Group/
-├── Nature/
-├── Urban/
-├── Food/
-├── Art/
-├── Vehicle/
-├── Pet/
-├── Non_Photos/
-└── Other_Photos/
-```
+You should include the GPU only if you have a dedicated NVIDIA GPU and you want the AI in the project to be run by it(It requires quite large files to be installed)
+# Step 3 
+The program will be runed and you just have to input the path to the directory that contains the photos and wait.
+# Step4: Enjoy!!!
+
 # PS: I put a lot of comments in the code so anyone can understand it!!!
