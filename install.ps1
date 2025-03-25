@@ -45,16 +45,8 @@ function Install-Python {
     }
 }
 
-# 2. Clone repository
-function Clone-Repository {
-    Write-Host "Cloning GitHub repository..."
-    if (-not (Test-Path "Smart-Image-Sorter")) {
-        git clone https://github.com/FilipBogosel/Smart-Image-Sorter.git
-    }
-    Set-Location Smart-Image-Sorter
-}
 
-# 3. Dependency installation
+# 2. Dependency installation
 function Install-Dependencies {
     param([bool]$UseCuda)
     
@@ -75,7 +67,7 @@ function Install-Dependencies {
     }
 }
 
-# 4. Model download
+# 3. Model download
 function Download-Model {
     Write-Host "Downloading RetinaNet model..."
     $modelDir = ".\models"
@@ -87,7 +79,7 @@ function Download-Model {
     }
 }
 
-# Main execution flow
+# 4.Main execution flow
 try {
     $useCuda = ($GpuSupport -eq "GPU")
     
