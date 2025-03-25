@@ -92,6 +92,7 @@ try {
     # Run the program
     Write-Host "Starting image organization..."
     .\venv\Scripts\activate
+    cd .\src
     python organise_photos.py
     
     Write-Host "Operation completed successfully!" -ForegroundColor Green
