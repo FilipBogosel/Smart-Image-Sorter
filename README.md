@@ -37,6 +37,14 @@ cd Smart-Image-Sorter
 You should include the GPU only if you have a dedicated NVIDIA GPU and you want the AI in the project to be run by it(It requires quite large files to be installed)
 # Step 3 
 The program will be runed and you just have to input the path to the directory that contains the photos and wait.
-# Step4: Enjoy!!!
+# Step 4: 
+If you want to run the program after the install run it using the commands wherever you open PowerShell(filepath denotes the path were you downloaded the repository with the .py files):
+```bash
+cd filepath\Smart-Image-Sorter\src
+python organise_photos.py
+```
+Replace path according to your case
+EX: filepath = D:\App, the command will be cd D:\App\Smart-Image-Sorter\src
+# Step 5: Enjoy!!!
 
 # PS: I put a lot of comments in the code so anyone can understand it!!!
