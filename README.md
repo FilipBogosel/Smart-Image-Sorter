@@ -16,7 +16,7 @@ An AI-powered Python script that intelligently organizes images into thematic ca
   - 📦 Other (uncategorized images)
 - **AI-Powered Classification**  
   `🧠` Uses RetinaNet + ResNet18 models
-- **One-Click Setup**  
+- **Quick and easy Setup**  
   `⚡` Self-contained PowerShell installer
 - **GPU Acceleration**  
   `🚀` Optional CUDA support for NVIDIA GPUs
