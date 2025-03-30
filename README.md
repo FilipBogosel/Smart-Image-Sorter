@@ -22,8 +22,8 @@ An AI-powered Python script that intelligently organizes images into thematic ca
   `🚀` Optional CUDA support for NVIDIA GPUs
 - **Smart Error Handling**  
   `🛡️` Automatic recovery from processing errors
-# To run the commands below youy should run Power Shell as an administrator,
-# press windows key, tyme PowerShell, right click on it and select run as administrator and use the following comand to go to the folder where you want to install the program at(you can copy the path from file explorer, top part, click on it then copy and paste after cd):
+# To run the commands below youy should run Power Shell as an administrator:
+**Press windows key, tyme PowerShell, right click on it and select run as administrator and use the following comand to go to the folder where you want to install the program at(you can copy the path from file explorer, top part, click on it then copy and paste after cd):**
 ```bash
 cd folder_path
 ```
