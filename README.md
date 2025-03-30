@@ -23,7 +23,7 @@ An AI-powered Python script that intelligently organizes images into thematic ca
 - **Smart Error Handling**  
   `🛡️` Automatic recovery from processing errors
 # To run the commands below youy should run Power Shell as an administrator,
-# press windows key, tyme PowerShell, right click on it and select run as administrator and use the following comand to go to the folder where you want to install the program at:
+# press windows key, tyme PowerShell, right click on it and select run as administrator and use the following comand to go to the folder where you want to install the program at(you can copy the path from file explorer, top part, click on it then copy and paste after cd):
 ```bash
 cd folder_path
 ```
@@ -32,11 +32,20 @@ Clone this repository(copy paste this comand in PowerShell and press Enter):
 ```bash
 git clone https://github.com/FilipBogosel/Smart-Image-Sorter.git
 ```
+After you clone the repository, run the following command to enable running the install.ps1 file:
+```
+powershell -noexit -ExecutionPolicy Bypass -File install.ps1
+```
 # Step 2
-Run the install.ps1 script
+Run the install.ps1 script:
 ```bash
 cd Smart-Image-Sorter
-./install.ps1[GPU]
+./install.ps1
+```
+Or, if you want to use your GPU:
+```bash
+cd Smart-Image-Sorter
+./install.ps1 GPU
 ```
 You should include the GPU only if you have a dedicated NVIDIA GPU and you want the AI in the project to be run by it(It requires quite large files to be installed)
 # Step 3 
