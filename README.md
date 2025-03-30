@@ -22,9 +22,13 @@ An AI-powered Python script that intelligently organizes images into thematic ca
   `🚀` Optional CUDA support for NVIDIA GPUs
 - **Smart Error Handling**  
   `🛡️` Automatic recovery from processing errors
-# To run the commands below youy should run Power Shell as an administrator
+# To run the commands below youy should run Power Shell as an administrator,
+# press windows key, tyme PowerShell, right click on it and select run as administrator and use the following comand to go to the folder where you want to install the program at:
+```bash
+cd folder_path
+```
 # Step 1
-Clone this repository:
+Clone this repository(copy paste this comand in PowerShell and press Enter):
 ```bash
 git clone https://github.com/FilipBogosel/Smart-Image-Sorter.git
 ```
